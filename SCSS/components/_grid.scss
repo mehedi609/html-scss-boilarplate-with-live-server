@@ -3,15 +3,15 @@
 
 .section {
   padding: 4.5rem 0 2rem;
-}
 
-.section__title {
-  font-size: v.$h2-font-size;
-  margin-bottom: v.$mb-2;
-  text-align: center;
+  &__title {
+    font-size: v.$h2-font-size;
+    margin-bottom: v.$mb-2;
+    text-align: center;
 
-  @include m.media-breakpoint-up(lg) {
-    font-size: v.$h2-font-size-lg;
+    @include m.media-breakpoint-up(lg) {
+      font-size: v.$h2-font-size-lg;
+    }
   }
 }
 

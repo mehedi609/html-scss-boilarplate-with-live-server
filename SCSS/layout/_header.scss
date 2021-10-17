@@ -1,3 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+@use "../abstracts/variables" as v;
+
+.header {
+  width: 100%;
+  position: fixed;
+  background: v.$body-color;
+  top: 20px;
+  left: 0;
+  z-index: v.$z-fixed;
+}

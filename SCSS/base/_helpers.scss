@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
-
+@use "sass:map";
 /**
  * Clear inner floats
  */
@@ -9,4 +9,42 @@
   clear: both;
   content: "";
   display: table;
+}
+
+.d-flex {
+  display: flex;
+}
+
+$align-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+);
+
+$justify-content: (
+  between: space-between,
+  around: space-around,
+);
+
+$column-directions: (
+  column-reverse: column-reverse,
+  column: column,
+);
+
+@each $key, $value in $align-items {
+  .align-items-#{$key} {
+    align-items: $value;
+  }
+}
+
+@each $key, $value in map.merge($align-items, $justify-content) {
+  .justify-content-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $column-directions {
+  .flex-direction-#{$key} {
+    flex-direction: $value;
+  }
 }
