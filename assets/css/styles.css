@@ -1,0 +1,107 @@
+/**
+ * Basic typography style for copy text
+ */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
+/*========== Colors ==========*/
+/*========== Font and typography ==========*/
+/*========== increased size in lg device ==========*/
+/*========== Font weight ==========*/
+/*========== Margenes Bottom ==========*/
+/*========== z index ==========*/
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3.5rem 0 0 0;
+  background: linear-gradient(90deg, #598349 0%, #838149 100%);
+  color: #dad8d7;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+}
+@media screen and (min-width: 992px) {
+  button {
+    font-size: 1rem;
+  }
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+}
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #dad8d7;
+  font-weight: 600;
+  font-size: 2rem;
+}
+@media screen and (min-width: 992px) {
+  h1,
+h2,
+h3,
+h4 {
+    font-size: 4rem;
+  }
+}
+
+.home {
+  color: #f4511f;
+}
+
+/*# sourceMappingURL=styles.css.map */
